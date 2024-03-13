@@ -40,14 +40,14 @@ function Home() {
             only five centuries
           </p>
           
-            <button onClick={()=>window.scrollTo({top:"1000",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
+            <button onClick={()=>window.scrollTo({top:"700",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
               Order Now
             </button>
         
         </Col>
         <Col sm={12} md={6}>
-        <div className="flex flex-wrap  pt-3 pe-3 justify-center">
-          {/* {homeProductCartList[0] ?
+        <div className="flex flex-wrap  pt-3 pe-3 justify-between">
+          {homeProductCartList[0] ?
             homeProductCartList.map(res => {
               return (
                 <HomeCard
@@ -66,14 +66,13 @@ function Home() {
                 />
               )
             })
-          } */}
-          <Carouselsz/>
+          }
           </div>
           </Col>
        
       </Row>
       <div className="">
-        <div className='flex w-full items-center'>
+        <div className='flex w-full items-center mt-3'>
           <h2 style={{ fontSize: "30px" }}>Freshh vegetables
           </h2>
           <div className='ml-auto flex gap-4'>
@@ -81,7 +80,7 @@ function Home() {
             <button onClick={nextProduct} className='bg-slate-300 hover:bg-slate-400 text-lg p-1 rounded'><i class="fa-solid fa-chevron-right"></i></button>
           </div>
         </div>
-        <section className="flex justify-around overflow-scroll scrollbar-none scroll-smooth transition-all-all" ref={slideProductRef}>
+        <div className="flex justify-stretch  overflow-scroll scrollbar-none scroll-smooth transition-all gap-1 w-full" ref={slideProductRef}>
           {
             homeListVegetables.map(res => {
               return (
@@ -97,10 +96,10 @@ function Home() {
             })
           }
 
-        </section>
+        </div>
       </div >
 
-    <section id='medhu'>  <AllProduct heading={"your products"} /></section>
+    <section id='medhu'>  <AllProduct heading={"Your products"} /></section>
 
     </div>
   )

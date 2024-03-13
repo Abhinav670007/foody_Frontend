@@ -2,7 +2,7 @@ import React from 'react'
 
 function HomeCard({name,image,category,price,loading }) {
   return (
-    <div className="bg-white shadow-md p-2 rounded min-w-[150px]">
+    <div className="bg-white shadow-md p-2 rounded min-w-[150px] mt-3">
       {
         name ? (
         <>
@@ -18,7 +18,7 @@ function HomeCard({name,image,category,price,loading }) {
         </>
         )
         :
-        <div className="flex justify-center items-center h-full">
+        <div className="flex justify-center items-center w-full  min-h-[250px]">
         <p>{loading}</p>
       </div>
       }

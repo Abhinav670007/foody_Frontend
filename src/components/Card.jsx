@@ -23,7 +23,7 @@ function Card({image,name,price,category,id}) {
         }}
   return (
     <div className='h-64 mt-4'>
-      <div className='w-full min-w-[200px] max-w-[200px]  max-h-[250px] bg-white hover:bg-gradient-to-r from-green-500 to-green-800 py-5 px-4 cursor-pointer flex flex-col rounded shadow'>
+      <div className=' w-full min-w-[200px] max-w-[200px]  max-h-[250px] bg-white hover:bg-gradient-to-r from-emerald-400 to-green-200 py-5 px-4 cursor-pointer flex flex-col rounded shadow'>
         <Link to={`/menu/${id}`} onClick={()=>window.scrollTo({top:"0",behavior:"smooth"})}>
           <div className="h-14 flex flex-col justify-center items-center">
               <img className='h-full bg-blend-color-burn' src={image}  />
