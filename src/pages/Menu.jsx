@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import AllProduct from '../components/AllProduct'
 import { addCartItems } from '../redux/productSlice'
+import { toast } from 'react-toastify'
 
 function Menu() {
 
@@ -11,11 +12,15 @@ function Menu() {
   const dispatch = useDispatch() 
 
   const productDisplay = productData.filter((res) => res._id === filterby)[0];
-console.log(productDisplay);
 
-const AddToCart=()=>{
-  dispatch(addCartItems(productDisplay))
-}
+  const check=()=>{  if(sessionStorage.getItem('isLogin')){
+    dispatch(addCartItems(productDisplay))
+    }else{
+      toast.error("login to Continue")
+    }}
+
+
+
   return (
     <div className='bg-gray-200 pt-5 '>
       <div className=' p-5 md:p-2 shadow w-50 m-auto'>
@@ -32,7 +37,7 @@ const AddToCart=()=>{
             </p>  
             <div className="flex gap-3  md:flex-nowrap  justify-center">
             <button className='bg-green-500 py-1 mt-2 rounded hover:bg-yellow-400 px-5'>Buy</button>    
-            <button onClick={AddToCart} className='bg-green-500 py-1 mt-2 rounded hover:bg-yellow-400 px-5'>Add Cart</button>    
+            <button onClick={check} className='bg-green-500 py-1 mt-2 rounded hover:bg-yellow-400 px-5'>Add Cart</button>    
             </div>   
             <div className="">
               <p className='text-slate-600 font-medium'>Description : </p>

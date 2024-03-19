@@ -4,13 +4,11 @@ import HomeCard from '../components/HomeCard'
 import { useSelector } from 'react-redux'
 import Card from '../components/Card'
 import AllProduct from '../components/AllProduct'
-import { Link } from 'react-router-dom'
-import Carouselsz from '../components/Carouselsz'
 
 function Home() {
   
   const productData = useSelector((state) => state.product.productList)
-  const homeProductCartList = productData.slice(0, 4)
+  const homeProductCartList = productData.slice(7, 11)
   const homeListVegetables = productData.filter(res => res.category == "vegetable", [])
 
   const loading = new Array(4).fill(null)
@@ -29,8 +27,8 @@ function Home() {
       <Row className=''>
         <Col sm={12} md={6} className="mt-3">
           <h2 className="text-4xl md:text-7xl font-bold py-3">
-            The Fastest Delivery in{" "}
-            <span className="text-red-600 text-">Your Home</span>
+            The Fresh Products in{" "}
+            <span className="text-red-600 text-">Your FingerTips</span>
           </h2>
           <p className="py-3 text-base ">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -81,7 +79,7 @@ function Home() {
           </div>
         </div>
         <div className="flex justify-stretch  overflow-scroll scrollbar-none scroll-smooth transition-all gap-1 w-full" ref={slideProductRef}>
-          {
+          {homeListVegetables[0]?
             homeListVegetables.map(res => {
               return (
                 <Card
@@ -93,7 +91,11 @@ function Home() {
                   image={res.image}
                 />
               )
-            })
+            }):
+            loading.map((res,index) => (
+              <Card loading="Loading..." key={index+"Loading"} />
+            ))
+
           }
 
         </div>

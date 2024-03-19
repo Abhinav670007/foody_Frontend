@@ -1,6 +1,6 @@
 import React from 'react'
 
-function HomeCard({name,image,category,price,loading }) {
+function HomeCard({name,image,category,price,loading}) {
   return (
     <div className="bg-white shadow-md p-2 rounded min-w-[150px] mt-3">
       {

@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import {addCartItems} from "../redux/productSlice"
 import { toast } from 'react-toastify'
 
-function Card({image,name,price,category,id}) {
+function Card({image,name,price,category,id,loading}) {
   const dispatch = useDispatch() 
   const AddToCart=()=>{
     dispatch(addCartItems({
@@ -23,6 +23,7 @@ function Card({image,name,price,category,id}) {
         }}
   return (
     <div className='h-64 mt-4'>
+      {image?(
       <div className=' w-full min-w-[200px] max-w-[200px]  max-h-[250px] bg-white hover:bg-gradient-to-r from-emerald-400 to-green-200 py-5 px-4 cursor-pointer flex flex-col rounded shadow'>
         <Link to={`/menu/${id}`} onClick={()=>window.scrollTo({top:"0",behavior:"smooth"})}>
           <div className="h-14 flex flex-col justify-center items-center">
@@ -36,7 +37,10 @@ function Card({image,name,price,category,id}) {
             </p> 
             </Link> 
             <button onClick={check} className='bg-yellow-500 py-1 mt-2 rounded-pill hover:bg-green-600'>Add Cart</button>    
-      </div>
+      </div>):(
+        <div className="flex justify-center items-center w-full min-w-[200px] max-w-[200px]  max-h-[250px] bg-white min-h-[250px] rounded">
+        <p>{loading}</p>
+      </div>)}
     </div>
 
   )
