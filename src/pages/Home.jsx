@@ -1,11 +1,30 @@
 import React, { useRef } from 'react'
 import { Row,Col } from 'react-bootstrap'
-import HomeCard from '../components/HomeCard'
 import { useSelector } from 'react-redux'
 import Card from '../components/Card'
 import AllProduct from '../components/AllProduct'
+import banner1 from '../assest/banner-01.jpg'
+import banner2 from '../assest/banner-02.jpg'
+import banner3 from '../assest/banner-03.jpg'
+import Carousel from 'react-bootstrap/Carousel';
+import blog1 from '../assest/blog-img-01.jpg'
+import blog2 from '../assest/blog-img-02.jpg'
+import blog3 from '../assest/blog-img.jpg'
+import '../pages/home.css'
+
+
+
 
 function Home() {
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 2000}
   
   const productData = useSelector((state) => state.product.productList)
   const homeProductCartList = productData.slice(7, 11)
@@ -23,8 +42,8 @@ function Home() {
   };
 
   return (
-    <div className='bg-gradient-to-r from-zinc-400 to-stone-700  pt-5'>
-      <Row className=''>
+    <div className='bg-slate-200  pt-5'>
+      {/* <Row className=''>
         <Col sm={12} md={6} className="mt-3">
           <h2 className="text-4xl md:text-7xl font-bold py-3">
             The Fresh Products in{" "}
@@ -68,7 +87,69 @@ function Home() {
           </div>
           </Col>
        
+      </Row> */}
+
+<Carousel>
+      <Carousel.Item className=''>
+        <img src={banner3} alt="" />
+        <Carousel.Caption className='pb-5 h-96'>
+          <h1 className='banner text-6xl font-extrabold my-8 text-black'>Welcome To Fresh Shop</h1>
+          <p className='text-black'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <button onClick={()=>window.scrollTo({top:"1450",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
+              Order Now
+            </button>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src={banner2} alt="" />
+        <Carousel.Caption className='pb-5 h-96'>
+        <h1 className='banner text-6xl font-extrabold my-8 text-yellow-200'>Welcome To Fresh Shop</h1>
+          <p className='text-black'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <button onClick={()=>window.scrollTo({top:"1450",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
+              Order Now
+            </button>
+        </Carousel.Caption>
+      </Carousel.Item>
+      <Carousel.Item>
+      <img src={banner1} alt="" />
+        <Carousel.Caption className='pb-5 h-96'>
+        <h1 className='banner text-6xl font-extrabold my-8 text-bla'>Welcome To Fresh Shop</h1>
+          <p className='text-black'>
+            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          </p>
+          <button onClick={()=>window.scrollTo({top:"1450",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
+              Order Now
+            </button>
+        </Carousel.Caption>
+      </Carousel.Item>
+    </Carousel>
+
+      <div className='mt-5'>
+        <p className='blog text-3xl text-center'>latest blog</p>
+        <p className='blog mt-2 text-center'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+      </div>
+
+    <div className='mt-5'>
+      <Row className='justify-center m-auto gap-3'>
+        <div className="col-4 w-96 h-96 border bg-slate-300 p-2 shadow " style={{height:"32rem"}}>
+          <img src={blog1} alt="No image" className='w-full '/>
+          <p className='text-center font-bold mt-2'>Fusce in augue non nisi fringilla</p>
+          <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+        </div>
+        <div className="col-6 w-96 bg-slate-300 border p-2 shadow">
+        <img src={blog2} alt="No image" className='w-full'/>
+        <p className='text-center font-bold mt-2'>Fusce in augue non nisi fringilla</p>
+          <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+        </div>
+        <div className="col-4 w-96 bg-slate-300 border p-2 shadow">
+        <img src={blog3} alt="No image" className='w-full'/>
+        <p className='text-center font-bold mt-2'>Fusce in augue non nisi fringilla</p>
+          <p>Nulla ut urna egestas, porta libero id, suscipit orci. Quisque in lectus sit amet urna dignissim feugiat. Mauris molestie egestas pharetra. Ut finibus cursus nunc sed mollis. Praesent laoreet lacinia elit id lobortis.</p>
+        </div>
       </Row>
+    </div>
+
+
       <div className="">
         <div className='flex w-full items-center mt-3'>
           <h2 style={{ fontSize: "30px" }}>Freshh vegetables
@@ -102,6 +183,10 @@ function Home() {
       </div >
 
     <section id='medhu'>  <AllProduct heading={"Your products"} /></section>
+
+    {/* Blog */}
+
+   
 
     </div>
   )

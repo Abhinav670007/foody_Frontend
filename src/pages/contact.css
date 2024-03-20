@@ -1,0 +1,107 @@
+/* Add your custom CSS styles here */
+.contact-box-main {
+    background-color: #f4f4f4;
+    padding: 60px 0;
+  }
+  
+  .contact-form-right {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-info-left {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .submit-button button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .submit-button button:hover {
+    background-color: #0056b3;
+  }
+  
+  .hvr-shrink {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  
+  .hvr-shrink:hover,
+  .hvr-shrink:focus,
+  .hvr-shrink:active {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+  
+  .hvr-hover {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px transparent;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  
+  .hvr-hover:hover,
+  .hvr-hover:focus,
+  .hvr-hover:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  .help-block.with-errors {
+    color: #dc3545;
+    margin-top: 5px;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  ul li {
+    margin-bottom: 20px;
+  }
+  
+  ul li p {
+    margin: 0;
+  }
+  
+  ul li p i {
+    margin-right: 10px;
+    color: #007bff;
+  }
+  
+  ul li p a {
+    color: #007bff;
+  }
+  
+  ul li p a:hover {
+    color: #0056b3;
+  }
+
+  
+  /* Blog */
+
+  
