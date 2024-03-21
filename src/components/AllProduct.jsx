@@ -3,6 +3,7 @@ import FilterProduct from './FilterProduct'
 import Card from './Card'
 import { useSelector } from 'react-redux'
 
+
 function AllProduct({ heading }) {
   const productData = useSelector((state) => state.product.productList)
 
@@ -27,7 +28,7 @@ function AllProduct({ heading }) {
   }
 
   return (
-    <section  className="mt-5">
+    <section  className="mt-5 p-3">
       <h2 style={{ fontSize: "30px" }}>{heading}
       </h2>
       <div className="flex gap-4 justify-center overflow-scroll scrollbar-none">

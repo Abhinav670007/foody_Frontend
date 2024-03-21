@@ -8,15 +8,6 @@ import '../pages/home.css'
 function About() {
   return (
     <div className='pt-24 mb-3'>
-      {/* <div className='pt-18 w-full grid grid-cols-1 md:grid-cols-2' controls autoPlay loop muted>
-      <video  className="video h-screen w-full object-cover" controls autoPlay loop muted>
-            <source src={veg} type="video/mp4" />
-        </video>
-        <div className='pt-64 bg-gradient-to-r from-green-200 to-white-800'>
-          <p className='about text-3xl text-center text-black-200'> Our commitment to organic farming practices means that our vegetables are free from harmful pesticides and chemicals vibrant bell peppers, each vegetable is bursting with freshness straight from our fields to your table.</p>
-          </div>
-      </div> */}
-
       <Row className='justify-center m-auto'>
           <div className="col-4">
               <img src={about} alt="" />
@@ -28,6 +19,23 @@ function About() {
 
               <button className='bg-green-500 p-2 mt-2 text-white'>Read More</button>
           </div>
+      </Row>
+
+      <Row className='flex justify-center m-auto mt-4 gap-3 pb-24'>
+        <div className="hr col-3">
+          <hr className=''/>
+          <h1 className='hm mt-3'>WE ARE TRUSTED</h1>
+          <p className='pg mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
+        <div className="hr col-3"><hr />
+        <h1 className='hm mt-3'>WE ARE PROFESSIONAL</h1>
+        <p className='pg mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+
+        </div>
+        <div className="hr col-3"><hr />
+        <h1 className='hm mt-3'>WE ARE EXPERT</h1>
+        <p className='pg mt-2'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        </div>
       </Row>
       
       

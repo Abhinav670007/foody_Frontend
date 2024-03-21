@@ -34,8 +34,9 @@ function Header() {
       {/* Desktop */}
 
       <div className='flex items-center h-full justify-between'>
-        <div className=''>
+        <div className='flex gap-3'>
           <Link to={'/'}><i class="fa-solid fa-bowl-food fa-2xl"></i></Link>
+          <h2 className='text-2xl font-bold'><span className='text-green-600'>Fresh</span>Shop</h2>
         </div>
         <nav className='gap-4 md:gap-6 text-base md:text-lg hidden md:flex'>
           <div><Link to={'/'}>Home</Link></div>

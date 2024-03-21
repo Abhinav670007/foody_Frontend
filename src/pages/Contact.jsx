@@ -34,7 +34,7 @@ function Contact() {
     <div className="row">
       <div className="col-lg-8 col-sm-12">
         <div className="contact-form-right">
-          <h1 className='text-2xl'>GET IN TOUCH</h1>
+          <h1 className='text-2xl text-center mb-4'>GET IN TOUCH</h1>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed odio
             justo, ultrices ac nisl sed, lobortis porta elit. Fusce in metus ac

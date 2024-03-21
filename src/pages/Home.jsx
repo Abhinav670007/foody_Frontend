@@ -10,6 +10,8 @@ import Carousel from 'react-bootstrap/Carousel';
 import blog1 from '../assest/blog-img-01.jpg'
 import blog2 from '../assest/blog-img-02.jpg'
 import blog3 from '../assest/blog-img.jpg'
+import about from '../assest/add-img-01.jpg'
+import about1 from '../assest/add-img-02.jpg'
 import '../pages/home.css'
 
 
@@ -95,7 +97,7 @@ function Home() {
         <Carousel.Caption className='pb-5 h-96'>
           <h1 className='banner text-6xl font-extrabold my-8 text-black'>Welcome To Fresh Shop</h1>
           <p className='text-black'>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          <button onClick={()=>window.scrollTo({top:"1450",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
+          <button onClick={()=>window.scrollTo({top:"2300",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
               Order Now
             </button>
         </Carousel.Caption>
@@ -105,7 +107,7 @@ function Home() {
         <Carousel.Caption className='pb-5 h-96'>
         <h1 className='banner text-6xl font-extrabold my-8 text-yellow-200'>Welcome To Fresh Shop</h1>
           <p className='text-black'>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          <button onClick={()=>window.scrollTo({top:"1450",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
+          <button onClick={()=>window.scrollTo({top:"2300",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
               Order Now
             </button>
         </Carousel.Caption>
@@ -117,7 +119,7 @@ function Home() {
           <p className='text-black'>
             Praesent commodo cursus magna, vel scelerisque nisl consectetur.
           </p>
-          <button onClick={()=>window.scrollTo({top:"1450",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
+          <button onClick={()=>window.scrollTo({top:"2300",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
               Order Now
             </button>
         </Carousel.Caption>
@@ -182,7 +184,16 @@ function Home() {
         </div>
       </div >
 
-    <section id='medhu'>  <AllProduct heading={"Your products"} /></section>
+      <div className='flex gap-4 mt-14 justify-center bg-slate-300 shadow p-5'>
+        <div className="">
+          <img src={about} alt="" />
+        </div>
+        <div className="">
+          <img src={about1} alt="" />
+        </div>
+      </div>
+
+    <section id='medhu' className='text-center'>  <AllProduct heading={"Your products"} /></section>
 
     {/* Blog */}
 
