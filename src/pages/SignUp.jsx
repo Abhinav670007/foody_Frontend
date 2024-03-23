@@ -41,7 +41,7 @@ function SignUp() {
             <input className='mt-4 rounded border p-2 rounded-pill w-50' type="text" placeholder='username' onChange={(e)=>setSignUp({...signUp,username:e.target.value})}/>
             <input className='mt-4 rounded border p-2 rounded-pill w-50' type="email" placeholder='email' onChange={(e)=>setSignUp({...signUp,email:e.target.value})}/>
             <input className='mt-4 rounded border p-2 rounded-pill w-50' type="number" placeholder='password' onChange={(e)=>setSignUp({...signUp,psswd:e.target.value})}/>
-              <button onClick={sendData} className='btn btn-success w-25 text-center m-auto mt-4 mb-1'>signUp</button>
+              <button onClick={sendData} className='btn btn-success  md:w-32 text-center m-auto mt-4 mb-1'>signUp</button>
 
               <h6>Already have account ?<Link to={"/login"}>Login</Link></h6>
             </form>

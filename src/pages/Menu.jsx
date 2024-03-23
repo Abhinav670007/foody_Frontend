@@ -23,7 +23,7 @@ function Menu() {
 
   return (
     <div className='bg-gray-200 pt-5 '>
-      <div className=' p-5 md:p-2 shadow w-50 m-auto'>
+      <div className=' p-5 md:p-2 shadow w-75 m-auto'>
         <div className="w-full max-w-4xl  m-auto md:flex bg-white px-2">
           <div className="max-w-lg  overflow-hidden">
             <img src={productDisplay.image} className='hover:scale-105 transition-all' alt="" />
@@ -35,9 +35,9 @@ function Menu() {
               <span className="text-red-500">₹</span>
               <span>{productDisplay.price}</span>
             </p>  
-            <div className="flex gap-3  md:flex-nowrap  justify-center">
-            <button className='bg-green-500 py-1 mt-2 rounded hover:bg-yellow-400 px-5'>Buy</button>    
-            <button onClick={check} className='bg-green-500 py-1 mt-2 rounded hover:bg-yellow-400 px-5'>Add Cart</button>    
+            <div className="gap-3 md:flex ">
+            <button className='bg-green-500 py-1 mt-2 rounded hover:bg-yellow-400 px-5 w-full'>Buy</button>    
+            <button onClick={check} className='bg-green-500 py-1  mt-2 rounded hover:bg-yellow-400 px-5 w-full'>Add Cart</button>    
             </div>   
             <div className="">
               <p className='text-slate-600 font-medium'>Description : </p>

@@ -32,7 +32,7 @@ function Home() {
   const homeProductCartList = productData.slice(7, 11)
   const homeListVegetables = productData.filter(res => res.category == "vegetable", [])
 
-  const loading = new Array(4).fill(null)
+  const loading = new Array(10).fill(null)
 
   //Slidind the card
   const slideProductRef = useRef();

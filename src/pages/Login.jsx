@@ -41,7 +41,7 @@ function Login() {
         <h1 className='mt-3 text-3xl'>Login</h1>
         <input className='mt-4 rounded border p-2 rounded-pill w-50' type="email" placeholder='email' onChange={(e)=>setSignUp({...signUp,email:e.target.value})}/>
         <input className='mt-4 rounded border p-2 rounded-pill w-50' type="number" placeholder='password' onChange={(e)=>setSignUp({...signUp,psswd:e.target.value})}/>
-          <button onClick={sendData} className='btn btn-success w-25 text-center m-auto mt-4'>signUp</button>
+          <button onClick={sendData} className='btn btn-success md:w-32 text-center m-auto mt-4 '>signUp</button>
 
           <h6 className='mt-3'>Dont have an account? <Link to={"/signUP"}>SignUp</Link></h6>
         </form>
