@@ -35,21 +35,39 @@ function Login() {
   }
   console.log(signUp);
   return (
-    <div className='bg-gray-400 h-[450px]'>
-    <center className='pt-24'>
-       <form className='items-center bg-gradient-to-r from-cyan-500 to-teal-800 border shadow w-50 flex-column d-flex form-control pb-5' onClick={handlesubmit}> 
-        <h1 className='mt-3 text-3xl'>Login</h1>
-        <input className='mt-4 rounded border p-2 rounded-pill w-50' type="email" placeholder='email' onChange={(e)=>setSignUp({...signUp,email:e.target.value})}/>
-        <input className='mt-4 rounded border p-2 rounded-pill w-50' type="number" placeholder='password' onChange={(e)=>setSignUp({...signUp,psswd:e.target.value})}/>
-          <button onClick={sendData} className='btn btn-success md:w-32 text-center m-auto mt-4 '>signUp</button>
+    <div className="bg-gray-400 h-[550px]">
+      <center className="pt-24">
+        <form
+          className="items-center bg-gradient-to-r from-cyan-500 to-teal-800 border shadow rounded max-w-96 w-5/6 px-3 flex-column d-flex  pb-5"
+          onClick={handlesubmit}
+        >
+          <h1 className="mt-3 text-3xl">Login</h1>
+          <input
+            className="mt-4 rounded border p-2 rounded-pill w-100"
+            type="email"
+            placeholder="email"
+            onChange={(e) => setSignUp({ ...signUp, email: e.target.value })}
+          />
+          <input
+            className="mt-4 rounded border p-2 rounded-pill w-100"
+            type="number"
+            placeholder="password"
+            onChange={(e) => setSignUp({ ...signUp, psswd: e.target.value })}
+          />
+          <button
+            onClick={sendData}
+            className="btn btn-success md:w-32 text-center m-auto mt-4 "
+          >
+            Login
+          </button>
 
           <h6 className='mt-3'>Dont have an account? <Link to={"/signUP"}>SignUp</Link></h6>
+          
         </form>
 
     </center>
 
-</div>
-  )
+</div>  )
 }
 
 export default Login
