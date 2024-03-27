@@ -176,7 +176,7 @@ function Home() {
               )
             }):
             loading.map((res,index) => (
-              <Card loading="Loading..." key={index+"Loading"} />
+              <Card loading="Loading..." key={index+"Loading"}/>
             ))
 
           }

@@ -11,7 +11,7 @@ function AllProduct({ heading }) {
   const categoryList = [...new Set(productData.map(res => res.category))]
 
   //Filter functions
-  const [filterby, setFilterby] = useState("")
+  // const [filterby, setFilterby] = useState("")
   const [datafilter, setDataFilter] = useState([])
 
   useEffect(() => {

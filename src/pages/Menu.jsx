@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import AllProduct from '../components/AllProduct'
 import { addCartItems } from '../redux/productSlice'
 import { toast } from 'react-toastify'
+import gif from "../assest/loading-7528_256.gif"
 
 function Menu() {
 
@@ -23,7 +24,8 @@ function Menu() {
 
   return (
     <div className='bg-gray-200 pt-5 '>
-      <div className=' p-5 md:p-2 shadow w-75 m-auto'>
+     {productDisplay?
+      (<div className=' p-5 md:p-2 shadow w-75 m-auto'>
         <div className="w-full max-w-4xl  m-auto md:flex bg-white px-2">
           <div className="max-w-lg  overflow-hidden">
             <img src={productDisplay.image} className='hover:scale-105 transition-all' alt="" />
@@ -45,9 +47,18 @@ function Menu() {
               </div> 
           </div>
         </div>
-      </div>
+      </div>)
+      :
+      <div className='m-auto flex flex-col items-center mt-5'>
+        <div className=''><img src={gif} alt="" /></div>
+        <div className='mt-5 text-3xl'>Loading...</div></div>}
       <div>
-        <AllProduct/>
+        {AllProduct?(
+          <AllProduct/>)
+        : AllProduct.map((res,index) => (
+          <AllProduct AllProduct="Loading..." key={index+"Loading"}/>
+        ))
+        }
       </div>
     </div>
   )
