@@ -8,15 +8,15 @@ function CartProduct({id,name,image,category,qty,total,price}) {
 
 
   return (
-    <div className='bg-slate-200 p-2 flex gap-3 rounded border border-slate'>
-        <div className="bg-white p-3 rounded overflow-hidden">
+    <div className='bg-slate-200 p-2 flex gap-3 rounded border border-slate mt-1'>
+        <div className="bg-white p-3  rounded overflow-hidden">
             <img src={image} alt="" className='h-28 w-36 object-cover' />
         </div>
        <div>
             <div className="gap-1 w-full">
               <div className='flex justify-between'>
                   <h3 className='font-semibold text-slate-600 text-center capitalize  text-lg md:text-xl'>{name}</h3>
-                    <div className="" onClick={()=>dispatch(deleteCartItems(id))}>
+                    <div className="items-stretch" onClick={()=>dispatch(deleteCartItems(id))}>
                     <i class="fa-solid fa-trash"></i>
                     </div>
               </div>
@@ -33,7 +33,7 @@ function CartProduct({id,name,image,category,qty,total,price}) {
                     <button onClick={()=>dispatch(decrementQty(id))} className='bg-slate-300 py-1 mt-2 rounded hover:bg-slate-400 px-3'>-</button>    
                     </div> 
                     <div className="flex items-center gap-2 font-bold ">
-                        <p>Total</p>
+                        <p className='ms-3'>Total</p>
                         <p>{total}</p>
                     </div>
                </div>

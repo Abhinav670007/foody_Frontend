@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux'
 import CartProduct from '../components/CartProduct';
 import cartImage from "../assest/empty.gif"
 import { Link } from 'react-router-dom';
+import { Col, Row } from 'react-bootstrap';
 
 function Cart() {
     const cartitem = useSelector((state)=>state.product.cartItem)
@@ -16,11 +17,11 @@ function Cart() {
         
           <h2 className='text-lg md:text-2xl font-bold text-slate-600'>Your Cart items</h2>
           {cartitem[0] ?
-          <div className="my-4 flex gap-3">
+          <Row className="my-4 flex gap-3">
   
               {/* display cart items */}
   
-              <div className="w-full max-w-3xl mt-3 ">
+              <Col sm={12} md={6} className="col-6 w-full max-w-3xl mt-3 ">
                 {
                   cartitem.map(res=>{
                     return(
@@ -37,10 +38,10 @@ function Cart() {
                   })
                
                 }
-              </div>
+              </Col>
              
                   {/* total cart item */}
-              <div className="w-full max-w-sm  ml-auto mt-3">
+              <Col sm={12} md={6} className="col-6 w-full max-w-sm  ml-auto mt-3">
                 <h2 className='bg-red-500 text-white p-2 text-lg'>Summary</h2>
                 <div className='flex w-full py-2 text-lg border-b'>
                   <p>Total Qty</p>
@@ -51,8 +52,8 @@ function Cart() {
                   <p className='ml-auto w-32 font-bold'>{totalPrice}</p>
                 </div>
                <Link to={"/payment"}> <button className='bg-green-400 w-full p-2 text-white'>Payment</button></Link>
-              </div>
-          </div>
+              </Col>
+          </Row>
           :
           <>
           <div className="flex w-full justify-center items-center flex-col ">

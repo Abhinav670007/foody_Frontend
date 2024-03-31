@@ -45,53 +45,7 @@ function Home() {
 
   return (
     <div className='bg-slate-200  pt-5'>
-      {/* <Row className=''>
-        <Col sm={12} md={6} className="mt-3">
-          <h2 className="text-4xl md:text-7xl font-bold py-3">
-            The Fresh Products in{" "}
-            <span className="text-red-600 text-">Your FingerTips</span>
-          </h2>
-          <p className="py-3 text-base ">
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries
-          </p>
-          
-            <button onClick={()=>window.scrollTo({top:"700",behavior:"smooth"})} className="btn btn-dander bg-danger mt-4">
-              Order Now
-            </button>
-        
-        </Col>
-        <Col sm={12} md={6}>
-        <div className="flex flex-wrap  pt-3 pe-3 justify-between">
-          {homeProductCartList[0] ?
-            homeProductCartList.map(res => {
-              return (
-                <HomeCard
-                  key={res._id}
-                  image={res.image}
-                  name={res.name}
-                  price={res.price}
-                  category={res.category} />
-              )
-            })
-            : loading.map((res, index) => {
-              return (
-                <HomeCard
-                  key={index}
-                  loading={"loading..."}
-                />
-              )
-            })
-          }
-          </div>
-          </Col>
-       
-      </Row> */}
-
-<Carousel>
+    <Carousel>
       <Carousel.Item className=''>
         <img src={banner3} alt="" />
         <Carousel.Caption className='pb-5 h-96'>
