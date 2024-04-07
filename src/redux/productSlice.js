@@ -53,10 +53,14 @@ export const productSlice = createSlice({
             if(qty > 1){
                 state.cartItem[index].qty = qtyDec
             }
+        },
+
+        clearCartItems:(state)=>{
+            state.cartItem = [];
         }
     }
 })
 
-export const {setDataproduct,addCartItems,deleteCartItems,incrementQty,decrementQty}= productSlice.actions
+export const {setDataproduct,addCartItems,deleteCartItems,incrementQty,decrementQty,clearCartItems}= productSlice.actions
 
 export default productSlice.reducer

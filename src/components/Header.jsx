@@ -7,15 +7,19 @@ import MenuItem from '@mui/material/MenuItem';
 import Tooltip from '@mui/material/Tooltip';
 import IconButton from '@mui/material/IconButton';
 import { toast } from 'react-toastify';
+import { useDispatch } from 'react-redux'
+import { clearCartItems } from '../redux/productSlice';
 
 function Header() {
   const navigate = useNavigate()
+  const dispatch  = useDispatch()
 
   const logout =()=>{
     handleClose()
     sessionStorage.removeItem('isLogin')
     toast.error("logout successfull")
     navigate("/")
+    dispatch(clearCartItems())
   }
 
   const [anchorEl, setAnchorEl] = useState(null);
@@ -49,11 +53,7 @@ function Header() {
             <i class="fa-solid fa-cart-shopping fa-2xl"></i>
             <div className='text-center absolute top-1 right-16 bg-red-500 rounded px-1 text-white'>{cartNumber.length}</div>
           </Link>
-          {/* <div> <i className='' class="fa-solid fa-user fa-2xl"></i></div>
-             <div className="absolute right-2 bg-white shadow drop-shadow-md px-2 mt-24">
-              <p className='whitespace-nowrap'>New Product</p>
-              <p className='whitespace-nowrap'> <Link to={"/login"}>Login</Link></p>
-             </div> */}
+          
 
           <Tooltip title="Account settings">
             <IconButton
