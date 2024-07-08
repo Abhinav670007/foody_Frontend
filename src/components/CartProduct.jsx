@@ -1,5 +1,5 @@
 import React from 'react'
-import { useDispatch } from 'react-redux'
+ import { useDispatch } from 'react-redux'
 import { decrementQty, deleteCartItems, incrementQty } from '../redux/productSlice'
 
 function CartProduct({id,name,image,category,qty,total,price}) {

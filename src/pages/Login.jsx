@@ -33,6 +33,7 @@ function Login() {
       toast.warning('fill the form completely')
     }
   }
+
   return (
     <div className="bg-gray-400 h-[550px]">
       <center className="pt-24">

@@ -49,6 +49,10 @@ function Newproduct() {
             headers : {
               "content-type" : "application/json"
             },
+
+
+
+            
             body : JSON.stringify(data)
           })
       
