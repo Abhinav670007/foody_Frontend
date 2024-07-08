@@ -8,7 +8,7 @@ function AllProduct({ heading }) {
   const productData = useSelector((state) => state.product.productList)
 
   //CATEGORY LIST
-  const categoryList = [Set(productData.map(res => res.category))]
+  const categoryList = [...new Set(productData.map(res => res.category))]
 
   //Filter functions
   const [datafilter, setDataFilter] = useState([])
